@@ -1,50 +1,79 @@
-# 🎬 ReelTranscriber (Local)
+# 🎬 ReelTranscriber
 
-A clean, local-first video transcription tool that converts any video file into:
-- **Transcript** (`.txt`)
-- **Subtitles** (`.srt`)
-- **Web captions** (`.vtt`)
+A local-first video transcription tool that converts video files into:
 
-Built for speed and privacy: **everything runs on your machine** (no uploads, no external services).
+- Clean transcript (`.txt`)
+- Subtitle file (`.srt`)
+- Web subtitle file (`.vtt`)
 
----
-
-## ✨ Why this exists
-
-Online tools usually make you:
-1) download a video
-2) upload it to another site
-3) wait for transcription
-4) download the result
-
-**ReelTranscriber** combines that into a single, lightweight local app with a simple UI.
+All processing runs entirely on your machine using Faster-Whisper, no uploads, no external APIs.
 
 ---
 
-## ✅ Features
+## 🚀 Why This Project?
 
-- Local transcription using **Faster-Whisper**
-- Audio extraction via **FFmpeg**
-- Clean minimal UI (Gradio)
-- Optional silence filtering (VAD)
-- Multiple Whisper model sizes (`tiny` → `large-v3`)
-- Language auto-detection + manual selection
-- One-click exports: TXT / SRT / VTT
+Most online transcription tools require:
+
+1. Uploading your video  
+2. Waiting for server processing  
+3. Downloading the transcript  
+
+ReelTranscriber simplifies that into a single local app that keeps your files private and processes everything directly on your system.
 
 ---
 
-## 🧰 Tech Stack
+## ✨ Features
+
+- Local transcription using Faster-Whisper
+- Automatic audio extraction with FFmpeg
+- Whisper model selection (`tiny` → `large-v3`)
+- Language auto-detection or manual selection
+- Optional silence removal (VAD filter)
+- Export formats:
+  - TXT (plain transcript)
+  - SRT (subtitle format)
+  - VTT (web subtitle format)
+- Clean and minimal UI
+
+---
+
+## 🛠 Tech Stack
 
 - Python
 - Gradio
-- Faster-Whisper (CTranslate2)
+- Faster-Whisper (CTranslate2 backend)
 - FFmpeg
 
 ---
 
-## 🚀 Quick Start (Windows)
+## 📦 Installation (Windows)
 
-### 1) Clone the repo
-```bash
+Clone the repository:
+
+```powershell
 git clone https://github.com/deepankshu/ReelTranscriber.git
 cd ReelTranscriber
+Create a virtual environment: python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+Install dependencies: pip install -r requirements.txt
+Run the app: python app.py
+The application will automatically open in your browser.
+
+▶️ Usage
+Upload a video file (mp4, mov, mkv, webm)
+Select Whisper model (default: small)
+Choose language (or keep auto)
+Click Transcribe
+Download transcript or subtitle files
+Exports are saved locally inside the _exports/ folder.
+
+🔒 Privacy
+All transcription processing happens locally on your computer.
+No files are uploaded to any external server.
+
+📄 License
+MIT License
+
+- Add GitHub repo “About” description + tags  
+- Make this look stronger for recruiters  
+- Or package it into a Windows `.exe` so it looks like real software 👀
