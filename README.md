@@ -1,110 +1,50 @@
-🎬 Reel Transcriber (Local)
+# 🎬 ReelTranscriber (Local)
 
+A clean, local-first video transcription tool that converts any video file into:
+- **Transcript** (`.txt`)
+- **Subtitles** (`.srt`)
+- **Web captions** (`.vtt`)
 
+Built for speed and privacy: **everything runs on your machine** (no uploads, no external services).
 
-A clean, modern, local-first video transcription tool built with Python + Faster-Whisper + Gradio.
+---
 
+## ✨ Why this exists
 
+Online tools usually make you:
+1) download a video
+2) upload it to another site
+3) wait for transcription
+4) download the result
 
-Convert any video file into:
+**ReelTranscriber** combines that into a single, lightweight local app with a simple UI.
 
+---
 
+## ✅ Features
 
-Clean transcript (.txt)
+- Local transcription using **Faster-Whisper**
+- Audio extraction via **FFmpeg**
+- Clean minimal UI (Gradio)
+- Optional silence filtering (VAD)
+- Multiple Whisper model sizes (`tiny` → `large-v3`)
+- Language auto-detection + manual selection
+- One-click exports: TXT / SRT / VTT
 
-Subtitle file (.srt)
+---
 
-Web subtitle file (.vtt)
+## 🧰 Tech Stack
 
+- Python
+- Gradio
+- Faster-Whisper (CTranslate2)
+- FFmpeg
 
+---
 
-All processing runs locally on your machine, no uploads, no external services, no data sharing.
+## 🚀 Quick Start (Windows)
 
-
-
-🚀 Features
-
-
-
-Fast local transcription using Faster-Whisper
-
-Automatic audio extraction via FFmpeg
-
-Clean minimal UI
-
-Silence removal (VAD filtering)
-
-Multiple model sizes (tiny → large-v3)
-
-Language auto-detection
-
-One-click exports
-
-
-
-🖥️ Built With
-
-
-
-Python
-
-Faster-Whisper
-
-Gradio
-
-FFmpeg
-
-
-
-📦 Installation
-
-1\. Clone the repository
-
-git clone https://github.com/YOUR\_USERNAME/reel-transcriber.git
-
-cd reel-transcriber
-
-
-
-2\. Create virtual environment
-
-python -m venv .venv
-
-.\\.venv\\Scripts\\activate
-
-
-
-3\. Install dependencies
-
-pip install -r requirements.txt
-
-
-
-4\. Run the app
-
-python app.py
-
-
-
-
-
-The app will open automatically in your browser.
-
-
-
-🔒 Privacy
-
-
-
-All transcription happens locally on your computer.
-
-No files are uploaded to any server.
-
-
-
-📄 License
-
-
-
-MIT License
-
+### 1) Clone the repo
+```bash
+git clone https://github.com/deepankshu/ReelTranscriber.git
+cd ReelTranscriber
